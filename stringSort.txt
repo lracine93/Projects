@@ -1,0 +1,51 @@
+#include <iostream>
+
+/* The purpose of this application is to implement a bubble sort algorithm to sort a string in alphabetical order */ 
+
+using namespace std;
+void bubbleSort(string s[], int numberOfElements){
+	
+	string temp;
+	for (int i = 0; i < numberOfElements; i++){
+		for (int j = 0; j < numberOfElements-1; j++){
+		
+		if(s[j] > s[j+1]){
+		temp = s[j];
+		s[j] = s[j+1];
+		s[j+1] = temp;
+	}
+	
+	}
+
+	}
+     
+}
+// Function to print the elements of an erray
+void printArray(string s[], int numberOfElements){
+  
+  for(int i = 0; i < numberOfElements; i++){
+		cout << s[i] << endl;	
+      
+    } 
+  
+  
+}
+
+
+
+int main (){
+
+	
+ string stringToSort[10] = {"kavxpfequl", "ynsxcrxout", "jrhmnjyvpb","kefrxznjsn", "juaypzwoow", "kaszncrqdc", "tlvszaghul", "owfjrozmdf", "qcwhbmviaj", "dakguurrhi"};
+ 
+      
+      cout << "Unsorted Array: "<< endl;
+      printArray(stringToSort, 10);
+     
+      
+      cout << "Sorted Array: " << endl;
+      bubbleSort(stringToSort, 10);
+      printArray(stringToSort, 10);
+
+	return 0;
+}
